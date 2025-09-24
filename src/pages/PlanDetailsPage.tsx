@@ -11,7 +11,7 @@ const PlanDetailsPage: React.FC = () => {
   const planInfo = planDetails[normalizedPlanName];
 
   const handleSubscribe = () => {
-    toast.success(`Parabéns! Você assinou o plano ${planInfo.title.toUpperCase()}! Em breve entraremos em contato.`);
+    toast.success(`Você selecionou o plano ${planInfo.title.toUpperCase()}! Em breve entraremos em contato.`);
     // In a real application, you would typically redirect to a confirmation page
     // or initiate a payment process here.
   };
