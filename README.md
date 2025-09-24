@@ -96,15 +96,3 @@ A estrutura principal do projeto é organizada da seguinte forma:
 ├── vite.config.ts          # Configurações do Vite
 └── README.md               # Este arquivo
 ```
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` (se existir) para mais detalhes.
-
-## Contato
-
-Para dúvidas ou informações adicionais, entre em contato.
