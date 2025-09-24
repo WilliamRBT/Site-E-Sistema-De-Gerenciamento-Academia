@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
   const testimonialsData = [
     {
       quote: "A melhor academia que já treinei! Equipamentos de ponta, ambiente incrível e profissionais super atenciosos. Recomendo de olhos fechados!",
-      name: "Juliana Silva",
+      name: "Juliana Halter",
       role: "Membro há 2 anos"
     },
     {
