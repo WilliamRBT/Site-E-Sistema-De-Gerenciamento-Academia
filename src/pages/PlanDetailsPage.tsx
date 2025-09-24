@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import toast from 'react-hot-toast'; // Import toast
 
 const planDetails: { [key: string]: { description: string; benefits: string[]; } } = {
   basico: {
@@ -40,6 +41,12 @@ const PlanDetailsPage: React.FC = () => {
   const { planName } = useParams<{ planName: string }>();
   const normalizedPlanName = planName ? planName.toLowerCase() : '';
   const planInfo = planDetails[normalizedPlanName];
+
+  const handleSubscribe = () => {
+    toast.success(`Parabéns! Você assinou o plano ${planName?.toUpperCase()}! Em breve entraremos em contato.`);
+    // In a real application, you would typically redirect to a confirmation page
+    // or initiate a payment process here.
+  };
 
   if (!planInfo) {
     return (
@@ -81,12 +88,12 @@ const PlanDetailsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-6">
               Pronto para começar sua jornada com o plano <span className="font-bold text-orange-500">{planName?.toUpperCase()}</span>?
             </p>
-            <Link
-              to="/contato"
+            <button
+              onClick={handleSubscribe}
               className="inline-block bg-orange-500 text-white font-bold text-base py-4 px-12 rounded-md uppercase tracking-wider hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/20"
             >
-              Entrar em Contato
-            </Link>
+              Assinar Plano
+            </button>
           </div>
         </div>
       </div>

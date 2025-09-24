@@ -9,6 +9,7 @@ import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import ContactPage from './pages/ContactPage';
 import PlanDetailsPage from './pages/PlanDetailsPage';
+import ToastProvider from './components/ToastProvider'; // Import ToastProvider
 
 // Layout component for pages that share Header and Footer
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -22,6 +23,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const App: React.FC = () => {
   return (
     <Router>
+      <ToastProvider /> {/* Add ToastProvider here */}
       <Routes>
         <Route path="/" element={
           <MainLayout>
