@@ -6,7 +6,7 @@
 
 ## Sobre o Projeto
 
-Este é o repositório da landing page da **GYM TESTE**, uma academia moderna e vibrante. O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
+Este é o repositório do site e sistema da **GYM TESTE**, uma academia moderna. O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
 
 ## Tecnologias Utilizadas
 
@@ -108,20 +108,20 @@ Desenvolver um sistema de gerenciamento interno para a academia, permitindo o ca
 
 ### 4.4 Funcionalidades Implementadas
 
-#### 4.4.1 Gerenciamento de Membros
+#### 4.5 Gerenciamento de Membros
 - Cadastrar novo membro
 - Listar todos os membros
 - Buscar membro por ID, nome ou email
 - Editar dados do membro
 - Remover membro
 
-#### 4.4.2 Gerenciamento de Planos
+#### 4.6 Gerenciamento de Planos
 - Cadastrar novo plano
 - Listar todos os planos
 - Editar plano existente
 - Remover plano (com verificação de uso)
 
-#### 4.4.3 Gerenciamento de Pagamentos
+#### 4.7 Gerenciamento de Pagamentos
 - Registrar pagamento
 - Listar todos os pagamentos
 - Verificar pendências
@@ -131,24 +131,25 @@ Desenvolver um sistema de gerenciamento interno para a academia, permitindo o ca
 - Registrar saída do membro
 - Listar frequência por período
 
-#### 4.4.5 Relatórios
+#### 4.8 Relatórios
 - Relatório de membros ativos
 - Relatório de receita mensal
 - Relatório de frequência por membro
 
-### 4.5 Validações Implementadas
+### 4.9 Validações Implementadas
 - Validação de email (formato básico)
 - Validação de telefone (apenas números e caracteres permitidos)
 - Verificação de existência de membros e planos
 - Controle de limites máximos de registros
 
-### 4.6 Persistência de Dados
+### 5 Persistência de Dados
 Os dados são salvos em arquivos binários na pasta `data/`:
 - `membros.dat`: Dados dos membros
 - `planos.dat`: Dados dos planos
 - `pagamentos.dat`: Dados dos pagamentos
 - `frequencias.dat`: Dados de frequência
 
+```
 Sistema-Interno/
 ├── README.md
 ├── website/
@@ -170,16 +171,17 @@ Sistema-Interno/
 │       └── (arquivos .dat gerados automaticamente)
 └── documentacao/
     └── documentacao-projeto.md
+```
 	
-## 7. Considerações Técnicas
+## 5. Considerações Técnicas
 
-### 7.1 Limitações do Sistema
+### 5.1 Limitações do Sistema
 - Máximo de 1000 membros
 - Máximo de 10 planos
 - Máximo de 5000 pagamentos
 - Máximo de 10000 registros de frequência
 
-### 7.2 Melhorias Futuras
+### 5.2 Melhorias Futuras
 - Implementação de banco de dados SQLite
 - Interface gráfica
 - Sistema de backup automático
