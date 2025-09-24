@@ -6,7 +6,8 @@
 
 ## Sobre o Projeto
 
-Este é o repositório da landing page da **GYM TESTE**, uma academia moderna e vibrante. O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
+**GYM TESTE**, academia moderna.
+O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
 
 ## Tecnologias Utilizadas
 
