@@ -69,7 +69,7 @@ const Header: React.FC = () => {
     if (location.pathname === '/' && location.hash) {
       const id = location.hash.substring(1); // Remove '#'
       // Atraso aumentado para garantir que o elemento alvo esteja renderizado após a mudança de rota
-      const timer = setTimeout(() => scrollToSection(id), 300); 
+      const timer = setTimeout(() => scrollToSection(id), 500); // Aumentado para 500ms
       return () => clearTimeout(timer);
     }
   }, [location.pathname, location.hash]); // Re-executa quando o caminho ou o hash mudam
