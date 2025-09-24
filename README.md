@@ -95,3 +95,93 @@ A estrutura principal do projeto é organizada da seguinte forma:
 ├── vite.config.ts          # Configurações do Vite
 └── README.md               # Este arquivo
 ```
+
+## 4. Sistema Interno em C
+
+### 4.1 Objetivo do Sistema
+Desenvolver um sistema de gerenciamento interno para a academia, permitindo o cadastro e controle de membros, planos, pagamentos e frequência.
+
+### 4.2 Tecnologias Utilizadas
+- **Linguagem:** C (padrão C99)
+- **Compilador:** GCC
+- **Armazenamento:** Arquivos binários (.dat)
+
+### 4.4 Funcionalidades Implementadas
+
+#### 4.4.1 Gerenciamento de Membros
+- Cadastrar novo membro
+- Listar todos os membros
+- Buscar membro por ID, nome ou email
+- Editar dados do membro
+- Remover membro
+
+#### 4.4.2 Gerenciamento de Planos
+- Cadastrar novo plano
+- Listar todos os planos
+- Editar plano existente
+- Remover plano (com verificação de uso)
+
+#### 4.4.3 Gerenciamento de Pagamentos
+- Registrar pagamento
+- Listar todos os pagamentos
+- Verificar pendências
+
+#### 4.4.4 Controle de Frequência
+- Registrar entrada do membro
+- Registrar saída do membro
+- Listar frequência por período
+
+#### 4.4.5 Relatórios
+- Relatório de membros ativos
+- Relatório de receita mensal
+- Relatório de frequência por membro
+
+### 4.5 Validações Implementadas
+- Validação de email (formato básico)
+- Validação de telefone (apenas números e caracteres permitidos)
+- Verificação de existência de membros e planos
+- Controle de limites máximos de registros
+
+### 4.6 Persistência de Dados
+Os dados são salvos em arquivos binários na pasta `data/`:
+- `membros.dat`: Dados dos membros
+- `planos.dat`: Dados dos planos
+- `pagamentos.dat`: Dados dos pagamentos
+- `frequencias.dat`: Dados de frequência
+
+Sistema-Interno/
+├── README.md
+├── website/
+│   ├── index.html
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+├── sistema-interno/
+│   ├── Makefile
+│   ├── include/
+│   │   └── academia.h
+│   ├── src/
+│   │   ├── main.c
+│   │   ├── membros.c
+│   │   ├── planos.c
+│   │   └── utils.c
+│   └── data/
+│       └── (arquivos .dat gerados automaticamente)
+└── documentacao/
+    └── documentacao-projeto.md
+	
+## 7. Considerações Técnicas
+
+### 7.1 Limitações do Sistema
+- Máximo de 1000 membros
+- Máximo de 10 planos
+- Máximo de 5000 pagamentos
+- Máximo de 10000 registros de frequência
+
+### 7.2 Melhorias Futuras
+- Implementação de banco de dados SQLite
+- Interface gráfica
+- Sistema de backup automático
+- Relatórios mais avançados
+- Integração com sistema de pagamento
