@@ -1,13 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importar Link
-import { normalizeString } from '../utils/stringUtils'; // Importar a função de normalização
+import { Link } from 'react-router-dom';
+import { normalizeString } from '../utils/stringUtils';
+import { planDetails } from '../utils/planData'; // Importar os detalhes dos planos
 
-const PricingCard: React.FC<{plan: string; price: string; features: string[]; popular?: boolean;}> = ({ plan, price, features, popular = false }) => (
+interface PricingCardProps {
+  plan: string;
+  price: string;
+  description: string; // Adicionado descrição
+  features: string[];
+  popular?: boolean;
+}
+
+const PricingCard: React.FC<PricingCardProps> = ({ plan, price, description, features, popular = false }) => (
   <div className={`border ${popular ? 'border-orange-500 shadow-2xl shadow-orange-500/10' : 'border-gray-800'} bg-[#1a1a1a] p-8 rounded-xl flex flex-col transform transition-all duration-300 hover:border-orange-500 hover:scale-105 relative z-10`}>
     <h3 className="text-xl font-semibold text-orange-500 mb-4 text-center tracking-wider uppercase">{plan}</h3>
     <p className="text-5xl font-extrabold text-white mb-6 text-center">
       R${price}<span className="text-lg font-medium text-gray-400">/mês</span>
     </p>
+    <p className="text-gray-400 mb-6 text-center font-light flex-grow">{description}</p> {/* Exibir a descrição */}
     <ul className="space-y-4 text-gray-400 mb-8 flex-grow border-t border-gray-800 pt-8">
       {features.map((feature, index) => (
         <li key={index} className="flex items-start">
@@ -23,24 +33,17 @@ const PricingCard: React.FC<{plan: string; price: string; features: string[]; po
 );
 
 const Pricing: React.FC = () => {
-  const plans = [
-    {
-      plan: 'Básico',
-      price: '99',
-      features: ['Acesso 24/7 à área de musculação', 'Vestiários completos', 'Acompanhamento básico inicial']
-    },
-    {
-      plan: 'Plus',
-      price: '129',
-      features: ['Todos os benefícios do Básico', 'Aulas Coletivas Ilimitadas', 'Acesso a todas as unidades', 'Avaliação Física Trimestral'],
-      popular: true
-    },
-    {
-      plan: 'Premium',
-      price: '159',
-      features: ['Todos os benefícios do Plus', 'Acompanhamento com Nutricionista', 'Acesso à área de spa e relaxamento', 'Traga um amigo 4x por mês']
-    }
-  ];
+  // Gerar os planos a partir do planDetails
+  const plans = Object.keys(planDetails).map(key => {
+    const plan = planDetails[key];
+    return {
+      plan: plan.title,
+      price: plan.price,
+      description: plan.description,
+      features: plan.benefits,
+      popular: plan.popular || false
+    };
+  });
 
   return (
     <section id="planos" className="py-24 md:py-32 bg-[#181818]">

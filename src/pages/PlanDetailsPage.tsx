@@ -1,50 +1,17 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
-import toast from 'react-hot-toast'; // Import toast
-import { normalizeString } from '../utils/stringUtils'; // Importar a função de normalização
-
-const planDetails: { [key: string]: { description: string; benefits: string[]; } } = {
-  basico: { // Chave sem acento
-    description: 'O plano Básico é ideal para quem busca flexibilidade e acesso essencial à nossa estrutura.',
-    benefits: [
-      'Acesso 24/7 à área de musculação',
-      'Vestiários completos e modernos',
-      'Acompanhamento básico inicial com instrutor',
-      'Wi-Fi gratuito em todas as áreas',
-      'Armários individuais para seus pertences'
-    ]
-  },
-  plus: {
-    description: 'O plano Plus oferece uma experiência mais completa, com acesso a aulas e unidades adicionais.',
-    benefits: [
-      'Todos os benefícios do Plano Básico',
-      'Aulas Coletivas Ilimitadas (Spinning, Yoga, Zumba, etc.)',
-      'Acesso a todas as unidades da GYM ELITE',
-      'Avaliação Física Trimestral com profissional',
-      'Descontos exclusivos em parceiros (suplementos, vestuário)'
-    ]
-  },
-  premium: {
-    description: 'O plano Premium é a escolha definitiva para quem busca o máximo em suporte e exclusividade.',
-    benefits: [
-      'Todos os benefícios do Plano Plus',
-      'Acompanhamento personalizado com Nutricionista (1 consulta/mês)',
-      'Acesso à área de spa e relaxamento (sauna, hidromassagem)',
-      'Traga um amigo 4x por mês gratuitamente',
-      'Personal Trainer (2 sessões/mês)',
-      'Toalhas e amenities de luxo'
-    ]
-  }
-};
+import toast from 'react-hot-toast';
+import { normalizeString } from '../utils/stringUtils';
+import { planDetails } from '../utils/planData'; // Importar os detalhes dos planos
 
 const PlanDetailsPage: React.FC = () => {
   const { planName } = useParams<{ planName: string }>();
-  const normalizedPlanName = planName ? normalizeString(planName) : ''; // Usar a função de normalização
+  const normalizedPlanName = planName ? normalizeString(planName) : '';
   const planInfo = planDetails[normalizedPlanName];
 
   const handleSubscribe = () => {
-    toast.success(`Parabéns! Você assinou o plano ${planName?.toUpperCase()}! Em breve entraremos em contato.`);
+    toast.success(`Parabéns! Você assinou o plano ${planInfo.title.toUpperCase()}! Em breve entraremos em contato.`);
     // In a real application, you would typically redirect to a confirmation page
     // or initiate a payment process here.
   };
@@ -64,11 +31,11 @@ const PlanDetailsPage: React.FC = () => {
   }
 
   return (
-    <div className="bg-[#121212] text-gray-200 min-h-screen pt-24"> {/* Added pt-24 for header clearance */}
+    <div className="bg-[#121212] text-gray-200 min-h-screen pt-24">
       <div className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Detalhes do Plano <span className="text-orange-500">{planName?.toUpperCase()}</span>
+            Detalhes do Plano <span className="text-orange-500">{planInfo.title.toUpperCase()}</span>
           </h2>
           <p className="text-lg text-gray-400 mt-4 max-w-3xl mx-auto font-light">
             {planInfo.description}
@@ -87,7 +54,7 @@ const PlanDetailsPage: React.FC = () => {
           </ul>
           <div className="mt-10 text-center">
             <p className="text-xl text-gray-300 mb-6">
-              Pronto para começar sua jornada com o plano <span className="font-bold text-orange-500">{planName?.toUpperCase()}</span>?
+              Pronto para começar sua jornada com o plano <span className="font-bold text-orange-500">{planInfo.title.toUpperCase()}</span>?
             </p>
             <button
               onClick={handleSubscribe}
