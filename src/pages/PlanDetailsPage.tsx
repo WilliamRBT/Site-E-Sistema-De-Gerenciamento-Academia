@@ -2,9 +2,10 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast'; // Import toast
+import { normalizeString } from '../utils/stringUtils'; // Importar a função de normalização
 
 const planDetails: { [key: string]: { description: string; benefits: string[]; } } = {
-  basico: {
+  basico: { // Chave sem acento
     description: 'O plano Básico é ideal para quem busca flexibilidade e acesso essencial à nossa estrutura.',
     benefits: [
       'Acesso 24/7 à área de musculação',
@@ -39,7 +40,7 @@ const planDetails: { [key: string]: { description: string; benefits: string[]; }
 
 const PlanDetailsPage: React.FC = () => {
   const { planName } = useParams<{ planName: string }>();
-  const normalizedPlanName = planName ? planName.toLowerCase() : '';
+  const normalizedPlanName = planName ? normalizeString(planName) : ''; // Usar a função de normalização
   const planInfo = planDetails[normalizedPlanName];
 
   const handleSubscribe = () => {

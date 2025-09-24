@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importar Link
+import { normalizeString } from '../utils/stringUtils'; // Importar a função de normalização
 
 const PricingCard: React.FC<{plan: string; price: string; features: string[]; popular?: boolean;}> = ({ plan, price, features, popular = false }) => (
   <div className={`border ${popular ? 'border-orange-500 shadow-2xl shadow-orange-500/10' : 'border-gray-800'} bg-[#1a1a1a] p-8 rounded-xl flex flex-col transform transition-all duration-300 hover:border-orange-500 hover:scale-105 relative z-10`}>
@@ -15,7 +16,7 @@ const PricingCard: React.FC<{plan: string; price: string; features: string[]; po
         </li>
       ))}
     </ul>
-    <Link to={`/planos/${plan.toLowerCase()}`} className={`mt-auto block w-full text-center py-3 px-6 rounded-md font-bold uppercase tracking-wider transition-colors duration-300 ${popular ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white'}`}>
+    <Link to={`/planos/${normalizeString(plan)}`} className={`mt-auto block w-full text-center py-3 px-6 rounded-md font-bold uppercase tracking-wider transition-colors duration-300 ${popular ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-gray-800 text-gray-300 hover:bg-orange-500 hover:text-white'}`}>
       Escolher Plano
     </Link>
   </div>
