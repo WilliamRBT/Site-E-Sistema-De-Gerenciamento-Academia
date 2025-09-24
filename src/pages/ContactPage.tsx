@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="text-orange-500 mr-4 mt-1" size={24} />
-                <p className="text-lg">Rua supino Torto, 000 - Centro, São Paulo - SP</p>
+                <p className="text-lg">Rua Supino Torto, 000 - Centro, São Paulo - SP</p>
               </div>
             </div>
             <div className="mt-10">
