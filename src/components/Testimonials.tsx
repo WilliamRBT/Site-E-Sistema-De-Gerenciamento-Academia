@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
     },
     {
       quote: "As aulas coletivas são fantásticas! Muita energia e variedade. Consegui atingir meus objetivos e fiz muitos amigos. A GYM ELITE é minha segunda casa.",
-      name: "Carlos Pereira",
+      name: "Carlos Supino",
       role: "Membro há 1 ano"
     },
     {
