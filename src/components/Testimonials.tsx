@@ -28,7 +28,7 @@ const Testimonials: React.FC = () => {
     },
     {
       quote: "O acompanhamento nutricional fez toda a diferença nos meus resultados. Uma equipe completa que se preocupa de verdade com o nosso bem-estar.",
-      name: "Ana Costa",
+      name: "Ana Whey",
       role: "Membro há 3 anos"
     }
   ];
