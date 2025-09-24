@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
       role: "Membro há 2 anos"
     },
     {
-      quote: "As aulas coletivas são fantásticas! Muita energia e variedade. Consegui atingir meus objetivos e fiz muitos amigos. A GYM ELITE é minha segunda casa.",
+      quote: "As aulas coletivas são fantásticas! Muita energia e variedade. Consegui atingir meus objetivos e fiz muitos amigos. A GYM TESTE é minha segunda casa.",
       name: "Carlos Supino",
       role: "Membro há 1 ano"
     },

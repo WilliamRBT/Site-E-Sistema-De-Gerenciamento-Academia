@@ -9,7 +9,7 @@ const CallToAction: React.FC = () => {
           Pronto Para <span className="text-orange-500">Transformar</span> Sua Vida?
         </h2>
         <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto font-light">
-          Não espere mais. Dê o primeiro passo em direção a uma vida mais saudável e forte. Junte-se à família GYM ELITE hoje!
+          Não espere mais. Dê o primeiro passo em direção a uma vida mais saudável e forte. Junte-se à família GYM TESTE hoje!
         </p>
         <Link 
           to="/#planos" // Usando Link para navegação interna para a seção de planos

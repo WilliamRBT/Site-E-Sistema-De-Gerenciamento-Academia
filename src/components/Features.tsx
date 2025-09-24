@@ -40,7 +40,7 @@ const Features: React.FC = () => {
     <section id="diferenciais" className="py-24 md:py-32 bg-[#121212]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">Por Que a <span className="text-orange-500">GYM ELITE</span>?</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">Por Que a <span className="text-orange-500">GYM TESTE</span>?</h2>
           <p className="text-lg text-gray-400 mt-4 max-w-3xl mx-auto font-light">
             Oferecemos uma estrutura completa e o suporte que você precisa para alcançar seus objetivos.
           </p>
