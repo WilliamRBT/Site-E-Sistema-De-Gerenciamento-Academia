@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Importar Link
 
 const PricingCard: React.FC<{plan: string; price: string; features: string[]; popular?: boolean;}> = ({ plan, price, features, popular = false }) => (
   <div className={`border ${popular ? 'border-orange-500 shadow-2xl shadow-orange-500/10' : 'border-gray-800'} bg-[#1a1a1a] p-8 rounded-xl flex flex-col transform transition-all duration-300 hover:border-orange-500 hover:scale-105 relative z-10`}>
