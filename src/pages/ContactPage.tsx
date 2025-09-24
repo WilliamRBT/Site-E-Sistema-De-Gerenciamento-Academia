@@ -19,7 +19,7 @@ const ContactPage: React.FC = () => {
             <div className="space-y-6 text-gray-300">
               <div className="flex items-center">
                 <Mail className="text-orange-500 mr-4" size={24} />
-                <p className="text-lg">contato@gymelite.com</p>
+                <p className="text-lg">contato@gymtech.com</p>
               </div>
               <div className="flex items-center">
                 <Phone className="text-orange-500 mr-4" size={24} />
