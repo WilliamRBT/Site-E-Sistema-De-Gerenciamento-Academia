@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
-      style={{ backgroundImage: "url('C:\Users\1Gp Pereiras\Downloads\dccaccce-94ad-4c92-aa1e-a199c7cafa64.png')" }}
+      style={{ backgroundImage: "url('/herobackground.png')" }}
     >
       <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative z-10 px-4">
