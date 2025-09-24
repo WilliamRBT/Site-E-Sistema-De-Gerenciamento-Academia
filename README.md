@@ -1,7 +1,7 @@
 # GYM TESTE - Landing Page
 
 <div align="center">
-  <img width="1200" height="475" alt="Demonstração da Landing Page" src="demonstracao.png" />
+  <img width="1200" height="475" alt="Demonstração da Landing Page" src="demogit.png" />
 </div>
 
 ## Sobre o Projeto
