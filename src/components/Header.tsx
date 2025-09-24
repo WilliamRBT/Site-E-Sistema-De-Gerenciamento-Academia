@@ -24,6 +24,8 @@ const Header: React.FC = () => {
         top: elementPosition - headerOffset,
         behavior: 'smooth'
       });
+    } else {
+      console.warn(`Elemento com ID "${id}" não encontrado para rolagem.`);
     }
   };
 
@@ -66,8 +68,8 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (location.pathname === '/' && location.hash) {
       const id = location.hash.substring(1); // Remove '#'
-      // Pequeno atraso para garantir que o elemento alvo esteja renderizado
-      const timer = setTimeout(() => scrollToSection(id), 100); 
+      // Atraso aumentado para garantir que o elemento alvo esteja renderizado após a mudança de rota
+      const timer = setTimeout(() => scrollToSection(id), 300); 
       return () => clearTimeout(timer);
     }
   }, [location.pathname, location.hash]); // Re-executa quando o caminho ou o hash mudam
