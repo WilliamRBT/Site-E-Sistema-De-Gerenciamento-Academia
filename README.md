@@ -43,10 +43,10 @@ Certifique-se de ter o Node.js instalado em seu sistema. Você pode baixá-lo em
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone <URL_DO_REPOSITORIO>
     cd gym-landing-page
     ```
-    *(Substitua `<URL_DO_SEU_REPOSITORIO>` pela URL real do seu repositório Git.)*
+    *(Substitua `<URL_DO_REPOSITORIO>` pela URL real do seu repositório Git.)*
 
 2.  **Instale as dependências:**
     ```bash
