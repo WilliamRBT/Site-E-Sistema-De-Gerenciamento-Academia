@@ -1,13 +1,12 @@
 # GYM TESTE - Landing Page
 
 <div align="center">
-  <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="1200" height="475" alt="Demonstração da Landing Page" src="demonstracao.png" />
 </div>
 
 ## Sobre o Projeto
 
-**GYM TESTE**, academia moderna.
-O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
+Este é o repositório da landing page da **GYM TESTE**, uma academia moderna e vibrante. O objetivo desta página é apresentar os diferenciais da academia, seus planos de adesão, depoimentos de clientes satisfeitos e informações de contato, incentivando novos usuários a se juntarem. A aplicação é construída com React, TypeScript e Tailwind CSS, focando em uma experiência de usuário fluida e um design responsivo.
 
 ## Tecnologias Utilizadas
 
@@ -96,3 +95,15 @@ A estrutura principal do projeto é organizada da seguinte forma:
 ├── vite.config.ts          # Configurações do Vite
 └── README.md               # Este arquivo
 ```
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` (se existir) para mais detalhes.
+
+## Contato
+
+Para dúvidas ou informações adicionais, entre em contato.
